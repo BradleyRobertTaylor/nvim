@@ -24,6 +24,8 @@ set('n', '<leader>ww', cmd 'set wrap!', 'Toggle word wrap')
 set('n', 'H', '^', 'Move to first character')
 set('n', 'L', '$', 'Move to last character')
 
+vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true })
+
 -- quickfix list commands
 set('n', ']q', vim.cmd.cnext, 'Next quickfix')
 set('n', '[q', vim.cmd.cprevious, 'Previous quickfix')
