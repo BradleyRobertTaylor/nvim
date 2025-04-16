@@ -40,7 +40,7 @@ return {
     keymap('n', '<leader>sk', builtin.keymaps, 'Search keymaps')
     keymap('n', '<C-p>', builtin.find_files, 'Search all files')
     keymap('n', '<leader>sw', builtin.grep_string, 'Search word under cursor')
-    keymap('n', '<leader>fg', builtin.live_grep, 'Grep all files')
+    keymap('n', '<C-f>', builtin.live_grep, 'Grep all files')
     keymap('n', '<leader><leader>', builtin.buffers, 'Search existing buffers')
     keymap('n', '<space>en', function()
       builtin.find_files { cwd = vim.fn.stdpath 'config' }
