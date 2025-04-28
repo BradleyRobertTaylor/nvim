@@ -33,5 +33,5 @@ set('n', '[q', vim.cmd.cprevious, 'Previous quickfix')
 -- gives control c all behaviors of escape
 set('i', '<C-c>', '<Esc>')
 
-set('n', '<leader>x', '<cmd>.lua<CR>', 'Execute the current line')
-set('n', '<leader><leader>x', '<cmd>source %<CR>', 'Execute the current file')
+-- set('n', '<leader>x', '<cmd>.lua<CR>', 'Execute the current line')
+-- set('n', '<leader><leader>x', '<cmd>source %<CR>', 'Execute the current file')
