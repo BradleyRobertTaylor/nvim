@@ -1,10 +1,8 @@
 return {
-  'echasnovski/mini.nvim',
-  version = false,
-  config = function()
-    require('mini.pairs').setup {}
-
-    require('mini.move').setup {
+  {
+    'echasnovski/mini.move',
+    version = false,
+    opts = {
       -- Module mappings. Use `''` (empty string) to disable one.
       mappings = {
         -- Move in Visual mode
@@ -23,6 +21,11 @@ return {
         -- Automatically reindent selection during linewise vertical move
         reindent_linewise = true,
       },
-    }
-  end,
+    },
+  },
+  {
+    'echasnovski/mini.pairs',
+    version = false,
+    opts = {},
+  },
 }
