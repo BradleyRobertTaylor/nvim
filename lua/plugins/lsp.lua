@@ -73,7 +73,6 @@ return {
       },
       eslint = {},
       pyright = {},
-      ruff = {},
       cssls = {},
       tailwindcss = {},
       jsonls = {
