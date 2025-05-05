@@ -4,6 +4,7 @@ return {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
+    'saghen/blink.cmp',
     { 'j-hui/fidget.nvim', opts = {} }, -- lsp status updates
     'b0o/schemastore.nvim', -- access to schemastore catalog for json
   },
@@ -44,7 +45,6 @@ return {
       virtual_text = {
         prefix = '■ ', -- Could be '●', '▎', 'x', '■', , 
       },
-      float = { border = 'rounded' },
       signs = {
         text = {
           [vim.diagnostic.severity.ERROR] = ' ',
@@ -97,8 +97,7 @@ return {
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-    local cmp = require 'cmp_nvim_lsp'
-    local capabilities = cmp.default_capabilities()
+    local capabilities = require('blink.cmp').get_lsp_capabilities()
     local lspconfig = require 'lspconfig'
     for name, config in pairs(servers) do
       lspconfig[name].setup(vim.tbl_deep_extend('force', {}, {
